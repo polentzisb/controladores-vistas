@@ -28,7 +28,7 @@ public class HomeController {
         return "registrationPage.jsp";
     }
     
-  //si el resultado tiene errores, retornar a la página de registro (no se preocupe por las validaciones por ahora)
+    //si el resultado tiene errores, retornar a la página de registro (no se preocupe por las validaciones por ahora)
     //si no, guarde el usuario en la base de datos, guarde el id del usuario en el objeto Session y redirija a /home
     @RequestMapping(value="/registration", method=RequestMethod.POST)
     public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
